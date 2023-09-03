@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #800080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrapper {
+  z-index: 5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.appWrapper {
+  background: #fff;
+  width: 600px;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.diceWrapper {
+  margin: 25px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#rollBtn, #resetBtn{
+  background: #800080;
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  border: 1px solid #800080;
+  border-radius: 10px;
+  font-size: 15pt;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 50px;
+  margin: 0 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+#rollBtn:hover, #resetBtn:hover {
+  background: #610061;
+}
+
+#rollBtn:active, #resetBtn:active {
+  transform: translateY(5px);
+}
+
+.diceWrapper {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  gap: 20px;
+}
+
+.dieStyle{
+  width: 75px;
+  height: 75px;
+  font-size: 16pt;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.dieStyle:hover {
+  border-color: #800080;
+}
+
+.watermark {
+  border-radius: 50px;
+  background: #fff;
+  text-align: center;
+  padding: 0.50rem 0.75rem;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #000;
+}
+
+.watermark:hover {
+  color: #800080;
+  background: #ffffffe1;
+}
+
+.winMsg {
+  margin: 25px 0;
+}
+
+#fireworks {
+  z-index: -1;
 }
