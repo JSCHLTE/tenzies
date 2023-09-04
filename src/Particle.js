@@ -6,8 +6,7 @@ export default function Particle() {
       })();
 
       fireworks({
-        colors: ["#ffffff", "#ff0000", "#00ffff"],
-        duration: 10,
+        colors: ["#FF10F0", "#1B03A3", "#39FF14", "#FF3131", "#FFF", "#BC13FE", "#FF5F1F"],
         sounds: "false",
         splitCount: 50,
       });

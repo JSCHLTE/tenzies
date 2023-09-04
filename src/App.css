@@ -12,22 +12,29 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
 }
 
 .wrapper {
   z-index: 5;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .appWrapper {
-  background: #fff;
-  width: 600px;
-  height: 350px;
+  background: rgba(255, 255, 255, 0.8);
+  min-width: 100%;
+  min-height: 350px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 }
 
 .diceWrapper {
@@ -66,7 +73,7 @@ body {
 .dieStyle{
   width: 75px;
   height: 75px;
-  font-size: 16pt;
+  font-size: 20pt;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -86,12 +93,10 @@ body {
   background: #fff;
   text-align: center;
   padding: 0.50rem 0.75rem;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
   text-decoration: none;
   color: #000;
+  margin: 2.5rem 0;
+  max-width: 200px;
 }
 
 .watermark:hover {
@@ -105,4 +110,10 @@ body {
 
 #fireworks {
   z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .diceWrapper {
+    grid-template: auto auto / repeat(3, 1fr);
+   }
 }
